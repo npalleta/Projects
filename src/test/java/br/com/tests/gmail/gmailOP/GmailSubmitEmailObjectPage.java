@@ -3,6 +3,7 @@ package br.com.tests.gmail.gmailOP;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
+
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -43,7 +44,8 @@ public class GmailSubmitEmailObjectPage {
 	}
 
 	public void insertPassword(String password) {
-		driver.findElement(gmailLocator.getPasswordLocator()).sendKeys(password);
+		driver.findElement(gmailLocator.getPasswordLocator())
+				.sendKeys(password);
 	}
 
 	public void clickSignInButton() {
@@ -79,8 +81,9 @@ public class GmailSubmitEmailObjectPage {
 				.click();
 	}
 
-	// We can isolate the assertions in another class, disassociating a little and leaving our structure more organized.
-	
+	// We can isolate the assertions in another class, disassociating a little
+	// and leaving our structure more organized.
+
 	public void checkTextInTheSentEmail(String emailText) {
 		String emailBodyContent = driver.findElement(gmailLocator.getEmailBodyContentLocator1()).getText();
 		Assert.assertTrue("Error: Text not found! | Erro: O texto não foi encontrado!", Objects.equals(emailText, emailBodyContent));

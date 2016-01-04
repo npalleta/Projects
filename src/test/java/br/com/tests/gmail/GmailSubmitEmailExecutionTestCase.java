@@ -8,7 +8,6 @@ import br.com.tests.gmail.webdrivers.SeleniumWebDrivers;
 
 // Our Test Case...
 public class GmailSubmitEmailExecutionTestCase {
-
 	
 	// Requirements for playing the Test Case... 
 	
@@ -32,7 +31,7 @@ public class GmailSubmitEmailExecutionTestCase {
 		/* ...passing the method chooseWebDriver() as parameter... 
 		 * And this method has an integer parameter in which it is responsible for the choice the webdriver.
 		 */
-		gSEOP = new GmailSubmitEmailObjectPage(sWD.chooseWebDriver(1));
+		gSEOP = new GmailSubmitEmailObjectPage(sWD.chooseWebDriver(3));
 	}
 
 	// Steps to reproduce the functionality to be tested...

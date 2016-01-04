@@ -6,14 +6,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-
 // Class responsible for setting up the webdrivers...
 
 public class SeleniumWebDrivers {
-
 	WebDriver webDriver;
 
-	public WebDriver chooseWebDriver(int selector) throws NullPointerException, WebDriverException {
+	public WebDriver chooseWebDriver(int selector) {
 		try {
 			switch (selector) {
 			case 1:
@@ -27,15 +25,16 @@ public class SeleniumWebDrivers {
 				break;
 			default:
 				webDriver = new FirefoxDriver();
-				break;
+			break;
 			}
 			//
-			return webDriver;
-			//
 		} catch (NullPointerException nPEx) {
-			throw new NullPointerException("Error: Webdriver selector not found! | Erro: Seletor do webdriver não encontrado!");
+			nPEx.printStackTrace();
+			System.out.println("Error: Webdriver selector is null! | Erro: Seletor do webdriver é nulo!");
 		} catch (WebDriverException wDEx) {
-			throw new WebDriverException("Error: Webdriver caused an error! | Erro: O webdriver causou um erro!", wDEx);
+			wDEx.printStackTrace();
+			System.out.println("Error: Webdriver caused an error! | Erro: O webdriver causou um erro!");
 		}
+		return webDriver;
 	}
 }
