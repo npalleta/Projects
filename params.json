@@ -1,0 +1,6 @@
+{
+  "name": "Projects",
+  "tagline": "Selenium WebDriver - Project",
+  "body": "### ** Selenium WebDriver Object Page Pattern Concept **\r\n\r\nThis is a little example how to use the Object Page Pattern in Selenium Projects.\r\n\r\nI used Maven to import the dependencies...\r\n\r\nThe rest of the explanation can be found in the comments of classes.",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
