@@ -11,6 +11,9 @@ public class GmailSubmitEmailExecutionTestCase {
 	
 	// Requirements for playing the Test Case... 
 	
+	// Web Driver
+	private SeleniumWebDrivers seleniumWebDrivers;
+	
 	// Proof Mass
 	private GmailSubmitEmailObjectPage gmailSubmitEmail;
 
@@ -27,7 +30,7 @@ public class GmailSubmitEmailExecutionTestCase {
 
 	@Before()
 	public void setUp() {
-		SeleniumWebDrivers seleniumWebDrivers = new SeleniumWebDrivers();
+		seleniumWebDrivers = new SeleniumWebDrivers();
 		/* ...passing the method chooseWebDriver() as parameter... 
 		 * And this method has an integer parameter in which it is responsible for the choice the webdriver.
 		 */
