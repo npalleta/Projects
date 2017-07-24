@@ -12,7 +12,7 @@ public class GmailSubmitEmailExecutionTestCase {
 	// Requirements for playing the Test Case... 
 	
 	// Proof Mass
-	private GmailSubmitEmailObjectPage gSEOP;
+	private GmailSubmitEmailObjectPage gmailSubmitEmail;
 
 	// User Email
 	private String user = "testuser@test.com";
@@ -27,38 +27,38 @@ public class GmailSubmitEmailExecutionTestCase {
 
 	@Before()
 	public void setUp() {
-		SeleniumWebDrivers sWD = new SeleniumWebDrivers();
+		SeleniumWebDrivers seleniumWebDrivers = new SeleniumWebDrivers();
 		/* ...passing the method chooseWebDriver() as parameter... 
 		 * And this method has an integer parameter in which it is responsible for the choice the webdriver.
 		 */
-		gSEOP = new GmailSubmitEmailObjectPage(sWD.chooseWebDriver(3));
+		gmailSubmitEmail = new GmailSubmitEmailObjectPage(seleniumWebDrivers.chooseWebDriver(3));
 	}
 
 	// Steps to reproduce the functionality to be tested...
 	@Test
 	public void testGmailEmailSending() {
-		gSEOP.accessHomePage();
-		gSEOP.insertUser(user);
-		gSEOP.clickNextButton();
-		gSEOP.waitTwoSecondsPageLoad();
-		gSEOP.insertPassword(password);
-		gSEOP.clickSignInButton();
-		gSEOP.waitTwentySecondsPageLoad();
-		gSEOP.clickWriteEmailButton();
-		gSEOP.waitTwoSecondsPageLoad();
-		gSEOP.insertEmailAddressInSendBox(to);
-		gSEOP.insertEmailSubjectInSendBox(subject);
-		gSEOP.insertEmailBodyContentInSendBox(body);
-		gSEOP.clickEmailSubmitButton();
-		gSEOP.waitTwoSecondsPageLoad();
-		gSEOP.clickSendConfirmationLink();
-		gSEOP.checkTextInTheSentEmail(body);
-		gSEOP.searchTextInTheSentEmail();
+		gmailSubmitEmail.accessHomePage();
+		gmailSubmitEmail.insertUser(user);
+		gmailSubmitEmail.clickNextButton();
+		gmailSubmitEmail.waitTwoSecondsPageLoad();
+		gmailSubmitEmail.insertPassword(password);
+		gmailSubmitEmail.clickSignInButton();
+		gmailSubmitEmail.waitTwentySecondsPageLoad();
+		gmailSubmitEmail.clickWriteEmailButton();
+		gmailSubmitEmail.waitTwoSecondsPageLoad();
+		gmailSubmitEmail.insertEmailAddressInSendBox(to);
+		gmailSubmitEmail.insertEmailSubjectInSendBox(subject);
+		gmailSubmitEmail.insertEmailBodyContentInSendBox(body);
+		gmailSubmitEmail.clickEmailSubmitButton();
+		gmailSubmitEmail.waitTwoSecondsPageLoad();
+		gmailSubmitEmail.clickSendConfirmationLink();
+		gmailSubmitEmail.checkTextInTheSentEmail(body);
+		gmailSubmitEmail.searchTextInTheSentEmail();
 	}
 
 	// Close the browser window after the test.
 	@After
 	public void tearDown() {
-		gSEOP.closeBrowser();
+		gmailSubmitEmail.closeBrowser();
 	}
 }

@@ -9,6 +9,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 // Class responsible for setting up the webdrivers...
 
 public class SeleniumWebDrivers {
+
 	WebDriver webDriver;
 
 	public WebDriver chooseWebDriver(int selector) {
@@ -25,7 +26,7 @@ public class SeleniumWebDrivers {
 				break;
 			default:
 				webDriver = new FirefoxDriver();
-			break;
+				break;
 			}
 			//
 		} catch (NullPointerException nPEx) {

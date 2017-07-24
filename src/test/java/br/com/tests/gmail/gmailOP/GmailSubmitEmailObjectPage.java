@@ -77,8 +77,7 @@ public class GmailSubmitEmailObjectPage {
 	}
 
 	public void clickSendConfirmationLink() {
-		driver.findElement(gmailLocator.getSendConfirmationLinkLocator())
-				.click();
+		driver.findElement(gmailLocator.getSendConfirmationLinkLocator()).click();
 	}
 
 	// We can isolate the assertions in another class, disassociating a little
