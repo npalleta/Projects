@@ -44,8 +44,7 @@ public class GmailSubmitEmailObjectPage {
 	}
 
 	public void insertPassword(String password) {
-		driver.findElement(gmailLocator.getPasswordLocator())
-				.sendKeys(password);
+		driver.findElement(gmailLocator.getPasswordLocator()).sendKeys(password);
 	}
 
 	public void clickSignInButton() {
