@@ -29,11 +29,11 @@ public class SeleniumWebDrivers {
 				break;
 			}
 			//
-		} catch (NullPointerException nPEx) {
-			nPEx.printStackTrace();
-			System.out.println("Error: Webdriver selector is null! | Erro: Seletor do webdriver é nulo!");
-		} catch (WebDriverException wDEx) {
-			wDEx.printStackTrace();
+		} catch (NullPointerException nullPointerEx) {
+			nullPointerEx.printStackTrace();
+			System.out.println("Error: Webdriver selector is null! | Erro: Seletor do webdriver Ã© nulo!");
+		} catch (WebDriverException WebDriverEx) {
+			WebDriverEx.printStackTrace();
 			System.out.println("Error: Webdriver caused an error! | Erro: O webdriver causou um erro!");
 		}
 		return webDriver;
