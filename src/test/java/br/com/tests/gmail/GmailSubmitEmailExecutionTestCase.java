@@ -14,7 +14,7 @@ public class GmailSubmitEmailExecutionTestCase {
 	// Web Driver
 	private SeleniumWebDrivers seleniumWebDrivers;
 	
-	// Proof Mass
+	// Object Page
 	private GmailSubmitEmailObjectPage gmailSubmitEmail;
 
 	// User Email
